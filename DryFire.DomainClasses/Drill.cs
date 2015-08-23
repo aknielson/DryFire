@@ -9,14 +9,19 @@ namespace DryFire.DomainClasses
     {
         public int DrillId { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
+
+        public string StartPosition { get; set; }
+        public string Procedure { get; set; }
 
         public byte[] Diagram { get; set; }
 
         //pistol, shotgun, rifle
-        public Equipment Equipment { get; set; }
+        public Platform? Equipment { get; set; }
 
-        public DrillType DrillType { get; set; }
+        public PlatformKind? EquipmentKind { get; set; }
+
+
+        public DrillType? DrillType { get; set; }
 
         public TimeSpan SuggestedTimeSpan { get; set; }
         public UInt16 SuggestedReps { get; set; }

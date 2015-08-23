@@ -9,12 +9,14 @@ namespace DryFire.DomainClasses
     {
         public int LogEntryId { get; set; }
         public DateTime DrillRunDate { get; set; }
-        public Drill DrillExcercise { get; set; }
-        public TimeSpan DrillGoalParTime { get; set; }
+        public  virtual Drill DrillExcercise { get; set; }
+        public int DrillGoalParTime { get; set; }
         public TimeSpan DrillTimeSpan { get; set; }
         public int DrillReps { get; set; }
-        public LogEntry PreviousLogEntry { get; set; }
+        public virtual LogEntry PreviousLogEntry { get; set; }
 
-        public Equipment EquipmentUsed { get; set; }
+        public Platform EquipmentUsed { get; set; }
+
+        public PlatformKind EquipmentKind { get; set; }
     }
 }
